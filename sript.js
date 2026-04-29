@@ -99,5 +99,8 @@ document.getElementById("formcontact").value = "";
 
     window.location.href = "formdata.html";
 
+
+    console.log("Data stored in localStorage and redirected to formdata.html");
+
 }
  
