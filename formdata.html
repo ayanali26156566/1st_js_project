@@ -3,31 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Data</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: Arial, sans-serif;
+            background: #e2f0fb;
+            color: #102a43;
+        }
+
+        .container {
+            width: min(520px, 100%);
+            padding: 28px;
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 18px 40px rgba(16, 42, 67, 0.12);
+        }
+
+        .container h1 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .field {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px 20px;
+            align-items: baseline;
+            margin: 14px 0;
+        }
+
+        .field strong {
+            color: #334155;
+        }
+
+        .field span {
+            color: #0f172a;
+        }
+
+        .empty-state {
+            color: #475569;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="formdata">
-
-
-        <h1> Name: <span id="name"> </span>
-        </h1>
-        <h1> FName: <span id="fatherName"> </span>
-        </h1>
-        <h1> Rollno: <span id="rollNo"> </span>
-        </h1>
-        <h1> SchoolName: <span id="schoolName"> </span>
-        </h1>
-        <h1> Class: <span id="class"> </span>
-        </h1>
-        <h1> Age: <span id="age"> </span>
-        </h1>
-        <h1> Email: <span id="email"> </span>
-        </h1>
-        <h1> Contact: <span id="contact"> </span>
-        </h1>
-
+    <div class="container">
+        
+       
     </div>
-
 
     <script src="./form.js"></script>
 </body>

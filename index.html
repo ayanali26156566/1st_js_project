@@ -132,7 +132,7 @@
 
 
 
-    <form class="form" type="submit" onsubmit="formdata(event)">
+    <form class="form" type="submit" onsubmit="studentdata(event)">
         <div class="title">
             <h2 class="stureg"> Student Registration</h2><br><span>
                 <h3>Fill the form</h3>
@@ -146,7 +146,7 @@
         <label>
             <input class="input" name="father_name" placeholder="Father Name" type="text" required id="formfathername">
         </label>
-
+<!-- 
         <label>
             <input class="input" name="rollno" placeholder="Roll Number" type="number" required id="formrollno">
         </label>
@@ -161,18 +161,17 @@
 
         <label>
             <input class="input" name="age" placeholder="Age" type="number" min="3" max="30" required id="formage">
-        </label>
+        </label> -->
 
         <label>
             <input class="input" name="email" placeholder="Gmail" type="email" required id="formemail">
         </label>
 
         <label>
-            <input class="input" name="contact" placeholder="Contact Number" type="tel" pattern="[0-9]{11}" required id="formcontact"
-                id="formcontact">
-        </label>    
+            <input class="input" name="contact" placeholder="Contact Number" type="tel" pattern="[0-9]{11}" required id="formcontact">
+        </label>
 
-        <button class="button-confirm" type="submit" onclick="formdata()" href="./formdata.html">Submit →</button>
+        <button class="button-confirm" type="submit" onsubmit="studentdata()">Submit →</button>
     </form>
 
 

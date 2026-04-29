@@ -45,59 +45,24 @@
 
 
 
-//                L------O--------O---------P
+//                L--o--c--a--l           S--t--o--r--a--g--e 
   
 
-
-
-
-
-var formdata = (e) => {
+function studentdata(e) {
     e.preventDefault();
-    console.log("ayan")
-    var showFatherName = document.getElementById("formfathername").value;
-    var showFullName = document.getElementById("formname").value;
-    var showRollno = document.getElementById("formrollno").value;
-    var showSchoolName = document.getElementById("formschool").value;
-    var showClass = document.getElementById("formclass").value;
-    var showAge = document.getElementById("formage").value;
-    var showEmail = document.getElementById("formemail").value;
-    var showContact = document.getElementById("formcontact").value;
 
+    const name = document.getElementById("name").value;
+    const fatherName = document.getElementById("fatherName").value;
+    const email = document.getElementById("email").value;
+    const contact = document.getElementById("contact").value;
     
-    console.log("Full Name: " + showFullName);
-    console.log("Father Name: " + showFatherName);
-    console.log("Roll No: " + showRollno);
-    console.log("School Name: " + showSchoolName);
-    console.log("Class: " + showClass);
-    console.log("Age: " + showAge);
-    console.log("Email: " + showEmail);
-    console.log("Contact: " + showContact);
-    
-    
-
-
-    localStorage.setItem("name",showFullName)
-    localStorage.setItem("fatherName",showFatherName)
-    localStorage.setItem("rollNo",showRollno)
-    localStorage.setItem("schoolName",showSchoolName)
-    localStorage.setItem("class",showClass)
-    localStorage.setItem("age",showAge)
-    localStorage.setItem("email",showEmail)
-    localStorage.setItem("contact",showContact)
-
-
-    
-document.getElementById("formname").value = "";
-document.getElementById("formfathername").value = "";
-document.getElementById("formrollno").value = "";
-document.getElementById("formschool").value = "";
-document.getElementById("formclass").value = "";
-document.getElementById("formage").value = "";
-document.getElementById("formemail").value = "";
-document.getElementById("formcontact").value = "";
-
-    window.location.href = "formdata.html";
-
+    const students = JSON.parse(localStorage.getItem("student")) || [];
+    studentform = {
+        "name": name,
+        "fatherName": fatherName,
+        "email": email,
+        "contact": contact
+    };
+    students.push(studentform);
+    localStorage.setItem("student", JSON.stringify(students));
 }
- 

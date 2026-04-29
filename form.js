@@ -1,9 +1,13 @@
-// Retrieve and display all stored fields
-document.getElementById("name").innerText = localStorage.getItem("name") || "Not provided";
-document.getElementById("fatherName").innerText = localStorage.getItem("fatherName") || "Not provided";
-document.getElementById("rollNo").innerText = localStorage.getItem("rollNo") || "Not provided";
-document.getElementById("schoolName").innerText = localStorage.getItem("schoolName") || "Not provided";
-document.getElementById("class").innerText = localStorage.getItem("class") || "Not provided";
-document.getElementById("age").innerText = localStorage.getItem("age") || "Not provided";
-document.getElementById("email").innerText = localStorage.getItem("email") || "Not provided";
-document.getElementById("contact").innerText = localStorage.getItem("contact") || "Not provided";
+const container = document.getElementById("container");
+
+const data = JSON.parse(localStorage.getItem("student")) || [];
+
+
+    data.forEach(function(student) {
+       container.innerHTML  += `
+        <div class="field"><strong>Name:</strong><span>${student.name || ''}</span></div>
+        <div class="field"><strong>Father Name:</strong><span>${student.fatherName || ''}</span></div>
+        <div class="field"><strong>Email:</strong><span>${student.email || ''}</span></div>
+        <div class="field"><strong>Contact:</strong><span>${student.contact || ''}</span></div>`;
+    });
+    
