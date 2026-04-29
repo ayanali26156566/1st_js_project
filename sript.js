@@ -49,21 +49,55 @@
   
 
 
-// localStorage.setItem("username", "Ali");
-// localStorage.setItem("age", "25");
-
-// var username = localStorage.getItem("username");
-// var age = localStorage.getItem("age");
-// console.log("Username: " + username);
-// console.log("Age: " + age);
 
 
 
-function form() {
-    var name = document.getElementById("name").value;
-    var rollno = document.getElementById("rollno").value;
-    var contact = document.getElementById("contact").value;
+var formdata = (e) => {
+    e.preventDefault();
+    console.log("ayan")
+    var showFatherName = document.getElementById("formfathername").value;
+    var showFullName = document.getElementById("formname").value;
+    var showRollno = document.getElementById("formrollno").value;
+    var showSchoolName = document.getElementById("formschool").value;
+    var showClass = document.getElementById("formclass").value;
+    var showAge = document.getElementById("formage").value;
+    var showEmail = document.getElementById("formemail").value;
+    var showContact = document.getElementById("formcontact").value;
+
     
+    console.log("Full Name: " + showFullName);
+    console.log("Father Name: " + showFatherName);
+    console.log("Roll No: " + showRollno);
+    console.log("School Name: " + showSchoolName);
+    console.log("Class: " + showClass);
+    console.log("Age: " + showAge);
+    console.log("Email: " + showEmail);
+    console.log("Contact: " + showContact);
+    
+    
+
+
+    localStorage.setItem("name",showFullName)
+    localStorage.setItem("fatherName",showFatherName)
+    localStorage.setItem("rollNo",showRollno)
+    localStorage.setItem("schoolName",showSchoolName)
+    localStorage.setItem("class",showClass)
+    localStorage.setItem("age",showAge)
+    localStorage.setItem("email",showEmail)
+    localStorage.setItem("contact",showContact)
+
+
+    
+document.getElementById("formname").value = "";
+document.getElementById("formfathername").value = "";
+document.getElementById("formrollno").value = "";
+document.getElementById("formschool").value = "";
+document.getElementById("formclass").value = "";
+document.getElementById("formage").value = "";
+document.getElementById("formemail").value = "";
+document.getElementById("formcontact").value = "";
+
+    window.location.href = "formdata.html";
+
 }
  
-  
