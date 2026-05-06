@@ -48,39 +48,63 @@
 //                L--o--c--a--l           S--t--o--r--a--g--e 
   
 
-function formdata(e) {
+// function formdata(e) {
+//     e.preventDefault();
+
+//     const name = document.getElementById("formname").value;
+//     const fatherName = document.getElementById("formfathername").value;
+//     const email = document.getElementById("formemail").value;
+//     const contact = document.getElementById("formcontact").value;
+    
+//     const students = JSON.parse(localStorage.getItem("student")) || [];
+//     const studentform = {
+//         "name": name,
+//         "fatherName": fatherName,
+//         "email": email,
+//         "contact": contact
+//     };
+//     students.push(studentform);
+//     localStorage.setItem("student", JSON.stringify(students));
+
+//     // Clear form
+//     document.getElementById("formname").value = "";
+//     document.getElementById("formfathername").value = "";
+//     document.getElementById("formemail").value = "";
+//     document.getElementById("formcontact").value = "";
+
+//     // Redirect
+//     window.location.href = "formdata.html";
+// }
+
+//     window.location.href = "formdata.html";
+
+
+//     console.log("Data stored in localStorage and redirected to formdata.html");
+
+
+
+function studentdata(e) {
     e.preventDefault();
 
     const name = document.getElementById("formname").value;
-    const fatherName = document.getElementById("formfathername").value;
     const email = document.getElementById("formemail").value;
     const contact = document.getElementById("formcontact").value;
-    
-    const students = JSON.parse(localStorage.getItem("student")) || [];
+
+    const students = getStoredStudents();
     const studentform = {
         "name": name,
-        "fatherName": fatherName,
         "email": email,
         "contact": contact
     };
     students.push(studentform);
     localStorage.setItem("student", JSON.stringify(students));
 
-    // Clear form
+    
     document.getElementById("formname").value = "";
-    document.getElementById("formfathername").value = "";
     document.getElementById("formemail").value = "";
     document.getElementById("formcontact").value = "";
 
-    // Redirect
+    
     window.location.href = "formdata.html";
 }
 
-    window.location.href = "formdata.html";
-
-
-    console.log("Data stored in localStorage and redirected to formdata.html");
-
-}
- 
->>>>>>> 424d35e8f2f0587e594c7c3d57401f0c7f0567d1

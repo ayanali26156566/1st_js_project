@@ -13,46 +13,98 @@
             font-family: Arial, sans-serif;
             background: #e2f0fb;
             color: #102a43;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
         .container {
-            width: min(520px, 100%);
-            padding: 28px;
+            width: 100%;
+            
             background: #ffffff;
             border-radius: 18px;
             border: 1px solid #cbd5e1;
             box-shadow: 0 18px 40px rgba(16, 42, 67, 0.12);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
         .container h1 {
             margin-top: 0;
             font-size: 1.8rem;
+            letter-spacing: 0.02em;
         }
 
-        .field {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 10px 20px;
-            align-items: baseline;
-            margin: 14px 0;
+        .student-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f1f7ff 100%);
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 18px;
+            box-shadow: 0 16px 30px rgba(16, 42, 67, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .field strong {
+        .student-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px rgba(16, 42, 67, 0.12);
+        }
+
+        .student-card h3 {
+            margin: 0 0 12px;
+            font-size: 1.25rem;
+            color: #102a43;
+        }
+
+        .student-card p {
+            margin: 6px 0;
             color: #334155;
+            line-height: 1.5;
         }
 
-        .field span {
-            color: #0f172a;
+        .card-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
         }
 
-        .empty-state {
-            color: #475569;
-            font-size: 1rem;
-            margin-top: 20px;
+        .edit-btn, .delete-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
+
+        .edit-btn {
+            background-color: #2d8cf0;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background-color: #1e5fa5;
+            transform: scale(1.05);
+        }
+
+        .delete-btn {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+        
     </style>
 </head>
 <body>
+
+  <h1 id="savestd">Saved Student Data</h1>
+
     <div class="container">
         
        
