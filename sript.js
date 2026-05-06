@@ -81,7 +81,16 @@
 
 //     console.log("Data stored in localStorage and redirected to formdata.html");
 
-
+function getStoredStudents() {
+    const storedValue = localStorage.getItem("student");
+    if (!storedValue) return [];
+    try {
+        const parsed = JSON.parse(storedValue);
+        return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+        return [];
+    }
+}
 
 function studentdata(e) {
     e.preventDefault();
